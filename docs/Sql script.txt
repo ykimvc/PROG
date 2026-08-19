@@ -1,0 +1,19 @@
+SELECT
+    *
+INTO
+    ActivityLog
+FROM
+    ActivityInput;
+
+SELECT
+    System.Timestamp() AS WindowEnd,
+    module,
+    COUNT(*) AS TotalActivities,
+    COUNT(DISTINCT studentId) AS UniqueStudents
+INTO ModuleSummary
+FROM ActivityInput
+GROUP BY
+    module,
+    TumblingWindow(minute, 1);
+
+
