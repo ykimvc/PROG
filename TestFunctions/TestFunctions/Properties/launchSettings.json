@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "FunctionApp9": {
+    "TestFunctions": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7109",
+      "commandLineArgs": "--port 7286",
       "launchBrowser": false
     }
   }
